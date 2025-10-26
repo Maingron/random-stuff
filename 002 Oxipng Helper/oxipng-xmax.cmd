@@ -1,0 +1,1 @@
+oxipng %* -o max -Z --preserve --alpha -f 0-9 --zi 255

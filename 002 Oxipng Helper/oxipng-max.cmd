@@ -1,0 +1,1 @@
+oxipng %* -o max -Z -p -a -f 0-9
