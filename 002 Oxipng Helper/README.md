@@ -10,6 +10,10 @@
 2. Restart CMD
 3. Profit
 
+
+### Note regarding versions:
+When Oxipng 10 was introduced, there were some breaking changes. Thus with Oxipng 10 you have to switch to the files in `Oxipng 10` folder. `Version 9` should work with most older versions.
+
 ## Usage
 - Run `oxipng-[preset] [file]` and your file will be optimized. I do this by opening cmd in the folder, then I usually run `oxipng-[preset] . -r` which will target all PNGs in the folder and all subfolders.
 
