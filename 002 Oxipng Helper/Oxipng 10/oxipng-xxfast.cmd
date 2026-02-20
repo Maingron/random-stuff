@@ -1,0 +1,1 @@
+oxipng %* -o 2 -p -a
