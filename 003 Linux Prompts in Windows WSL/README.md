@@ -1,4 +1,5 @@
 # 003 Linux Prompts in Windows WSL
+Route prompts like 'ls' or 'rm' through WSL so you can use them Linux commands in Windows!  
 
 ## How to use
 - You need to have WSL installed
