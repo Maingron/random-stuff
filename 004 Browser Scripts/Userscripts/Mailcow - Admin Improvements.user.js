@@ -9,8 +9,10 @@
 // @source           https://github.com/Maingron/random-stuff/blob/main/004%20Browser%20Scripts/Userscripts/Mailcow%20-%20Admin%20Improvements.user.js
 // @downloadURL      https://raw.githubusercontent.com/Maingron/random-stuff/main/004%20Browser%20Scripts/Userscripts/Mailcow%20-%20Admin%20Improvements.user.js
 // @updateURL        https://raw.githubusercontent.com/Maingron/random-stuff/main/004%20Browser%20Scripts/Userscripts/Mailcow%20-%20Admin%20Improvements.user.js
-// @version          2026.03.1-dev
+// @version          2026.03.1
 // @description      Slight UI Improvements for Mailcow Admins
+// @description:de   Leiche UI-Verbesserungen für Mailcow Admins
+// @description:en   Slight UI Improvements for Mailcow Admins
 // @icon             https://mailcow.email/favicon.ico
 // @copyright        2026 Maingron
 // @created          2026-03-09
