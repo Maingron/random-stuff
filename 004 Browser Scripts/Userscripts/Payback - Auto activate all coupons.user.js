@@ -7,9 +7,9 @@
 // @homepage         https://maingron.com/
 // @supportURL       https://github.com/Maingron/random-stuff/issues
 // @source           https://github.com/Maingron/random-stuff/blob/main/004%20Browser%20Scripts/Userscripts/Payback%20-%20Auto%20activate%20all%20coupons.user.js
-// @downloadURL      https://raw.githubusercontent.com/maingron/random-stuff/main/004%20Browser%20Scripts/Userscripts/Payback%20-%20Auto%20activate%20all%20coupons.user.js
-// @updateURL        https://raw.githubusercontent.com/maingron/random-stuff/main/004%20Browser%20Scripts/Userscripts/Payback%20-%20Auto%20activate%20all%20coupons.user.js
-// @version          2026.03.2
+// @downloadURL      https://raw.githubusercontent.com/Maingron/random-stuff/main/004%20Browser%20Scripts/Userscripts/Payback%20-%20Auto%20activate%20all%20coupons.user.js
+// @updateURL        https://raw.githubusercontent.com/Maingron/random-stuff/main/004%20Browser%20Scripts/Userscripts/Payback%20-%20Auto%20activate%20all%20coupons.user.js
+// @version          2026.03.3
 // @description      Automatically activate all coupons on the Payback website
 // @description:de   Alle Payback Gutscheine automatisch aktivieren
 // @description:en   Automatically activate all coupons on the Payback website
