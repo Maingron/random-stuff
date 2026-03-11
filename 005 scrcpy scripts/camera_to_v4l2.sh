@@ -1,15 +1,14 @@
 #!/bin/sh
 set -eu
 VIDEO_NR=$(find /dev/ -name "video*" | wc -l)
-# VIDEO_NR=13
 DEVP="/dev/video${VIDEO_NR}"
 VIDEO_HEIGHT=1080
 VIDEO_WIDTH=1920
 VIDEO_FPS=60
 VIDEO_CODEC="h265" # h264, h265, av1
 CAMERA_ID=2
-SCRCPY_ADD_ARGS=""
-# SCRCPY_ADD_ARGS="--no-window"
+SCRCPY_PREFERRED_DEVICE_SERIAL="" # needed if multiple Android devices are connected
+SCRCPY_ADD_ARGS="--no-window"
 
 
 # Fix XDG_RUNTIME_DIR for sudo
@@ -24,7 +23,11 @@ modprobe v4l2loopback devices=1 video_nr="$VIDEO_NR" card_label=scrcpy-cam exclu
 
 sleep .25
 
-scrcpy --video-source=camera --camera-id=$CAMERA_ID --camera-size="${VIDEO_WIDTH}x${VIDEO_HEIGHT}" --no-audio --v4l2-sink="$DEVP" --video-codec=$VIDEO_CODEC $SCRCPY_ADD_ARGS
+if [ -n "$SCRCPY_PREFERRED_DEVICE_SERIAL" ]; then
+	scrcpy --serial=$SCRCPY_PREFERRED_DEVICE_SERIAL --video-source=camera --camera-id=$CAMERA_ID --camera-size="${VIDEO_WIDTH}x${VIDEO_HEIGHT}" --no-audio --v4l2-sink="$DEVP" --video-codec=$VIDEO_CODEC $SCRCPY_ADD_ARGS
+else
+	scrcpy --video-source=camera --camera-id=$CAMERA_ID --camera-size="${VIDEO_WIDTH}x${VIDEO_HEIGHT}" --no-audio --v4l2-sink="$DEVP" --video-codec=$VIDEO_CODEC $SCRCPY_ADD_ARGS
+fi
 
 echo "Exiting scrcpy, cleaning up..."
 
