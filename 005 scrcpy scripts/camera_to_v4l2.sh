@@ -19,7 +19,7 @@ modprobe -r v4l2loopback || true
 
 sleep .25
 
-modprobe v4l2loopback devices=1 video_nr="$VIDEO_NR" card_label=scrcpy-cam exclusive_caps=0 max_width=$VIDEO_WIDTH max_height=$VIDEO_HEIGHT
+modprobe v4l2loopback devices=1 video_nr="$VIDEO_NR" card_label=scrcpy-cam exclusive_caps=1,1,1,1,1,1,1,1 max_width=$VIDEO_WIDTH max_height=$VIDEO_HEIGHT
 
 sleep .25
 
