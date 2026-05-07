@@ -9,10 +9,11 @@
 // @source           https://github.com/Maingron/random-stuff/blob/main/004%20Browser%20Scripts/Userscripts/Perplexity.ai%20-%20Remove%20login%20requirement.user.js
 // @downloadURL      https://raw.githubusercontent.com/Maingron/random-stuff/refs/heads/main/004%20Browser%20Scripts/Userscripts/Perplexity.ai%20-%20Remove%20login%20requirement.user.js
 // @updateURL        https://raw.githubusercontent.com/Maingron/random-stuff/refs/heads/main/004%20Browser%20Scripts/Userscripts/Perplexity.ai%20-%20Remove%20login%20requirement.user.js
-// @version          2026.05.2
+// @version          2026.05.3
 // @description      Remove login requirement on Perplexity.ai. This includes all annoying overlays, cookie banner and Login features.
 // @description:de   Login Bedingung auf Perpexity.ai entfernen. Dies entfernt alle nervigen Overlays, Cookie Banner und Login Features.
 // @description:en   Remove login requirement on Perplexity.ai. This includes all annoying overlays, cookie banner and Login features.
+// @icon             https://www.perplexity.ai/favicon.ico
 // @icon             https://www.perplexity.ai/favicon.svg
 // @copyright        2026 Maingron
 // @created          2026-05-07
@@ -24,6 +25,8 @@
 // @tag              perplexity
 // @tag              perplexity.ai
 // @tag              Pop-Up
+// OpenUserJS:       https://openuserjs.org/scripts/Maingron/Perplexity.ai_Remove_login_requirement
+// Greasy Fork:      https://greasyfork.org/de/scripts/577012-perplexity-ai-remove-login-requirement
 // ==/UserScript==
 
 (function() {
