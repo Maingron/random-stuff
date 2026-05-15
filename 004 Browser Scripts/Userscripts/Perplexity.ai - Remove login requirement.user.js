@@ -9,7 +9,7 @@
 // @source           https://github.com/Maingron/random-stuff/blob/main/004%20Browser%20Scripts/Userscripts/Perplexity.ai%20-%20Remove%20login%20requirement.user.js
 // @downloadURL      https://raw.githubusercontent.com/Maingron/random-stuff/refs/heads/main/004%20Browser%20Scripts/Userscripts/Perplexity.ai%20-%20Remove%20login%20requirement.user.js
 // @updateURL        https://raw.githubusercontent.com/Maingron/random-stuff/refs/heads/main/004%20Browser%20Scripts/Userscripts/Perplexity.ai%20-%20Remove%20login%20requirement.user.js
-// @version          2026.05.3
+// @version          2026.05.4
 // @description      Remove login requirement on Perplexity.ai. This includes all annoying overlays, cookie banner and Login features.
 // @description:de   Login Bedingung auf Perpexity.ai entfernen. Dies entfernt alle nervigen Overlays, Cookie Banner und Login Features.
 // @description:en   Remove login requirement on Perplexity.ai. This includes all annoying overlays, cookie banner and Login features.
@@ -17,7 +17,7 @@
 // @icon             https://www.perplexity.ai/favicon.svg
 // @copyright        2026 Maingron
 // @created          2026-05-07
-// @modified         2026-05-07
+// @modified         2026-05-26
 // @license          MIT
 // @match            http*://www.perplexity.ai/*
 // @match            http*://perplexity.ai/*
@@ -29,9 +29,22 @@
 // Greasy Fork:      https://greasyfork.org/de/scripts/577012-perplexity-ai-remove-login-requirement
 // ==/UserScript==
 
+
+
+
 (function() {
 	'use strict';
 	console.log("[UserScript][Maingron][Perplexity.ai: Remove login requirement] Removing overlays and writing CSS Code to page");
+
+	// Allow scrolling - Perplexity disables scrolling by preventDefault(e). We intercept and prevent preventDefault if wheel or scroll
+	const originalPreventDefault = Event.prototype.preventDefault;
+	Event.prototype.preventDefault = function () {
+		if (this.type == "wheel" || this.type == "scroll") { } else {
+			return originalPreventDefault.call(this);
+		}
+	};
+
+
 	const elementsSelectors = [
 		"html[lang][dir] body script#google-identity-services-script",
 		"html[lang][dir] body #credential_picker_container iframe",
