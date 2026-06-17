@@ -49,7 +49,10 @@
 		"html[lang][dir] body script#google-identity-services-script",
 		"html[lang][dir] body #credential_picker_container iframe",
 		"html[lang][dir] body #cookie-consent",
-		"html[lang][dir] body div[data-type='portal']"
+		"html[lang][dir] body div[data-type='portal']",
+		"html[lang][dir] body #radix-_r_m_",
+		"html[lang][dir] body #radix-_r_h_",
+		"html[lang][dir] body span[data-radix-focus-guard]"
 	];
 
 	GM_addStyle(`
