@@ -76,12 +76,9 @@
 			});
 		}, 4400 + Math.random() * 2400); // Timeout value is slightly randomized to make it seem more organic
 
-		window.setTimeout(function () {
-			document.querySelectorAll(elementsSelectorsEager).forEach((item) => {
-				item.remove();
-			});
-			document.body.style.pointerEvents = "";
-			
-		}, 100);
+		document.querySelectorAll(elementsSelectorsEager).forEach((item) => {
+			item.remove();
+		});
+		document.body.style.pointerEvents = "";
 	});
 })();
