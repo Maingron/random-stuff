@@ -55,6 +55,10 @@
 		"html[lang][dir] body span[data-radix-focus-guard]"
 	];
 
+	const elementsSelectorsEager = [
+		"html[lang][dir] body span[data-radix-focus-guard]"
+	]
+
 	GM_addStyle(`
 		${elementsSelectors.join(",")} {
 			display: none !important;
@@ -71,5 +75,13 @@
 				item.remove();
 			});
 		}, 4400 + Math.random() * 2400); // Timeout value is slightly randomized to make it seem more organic
+
+		window.setTimeout(function () {
+			document.querySelectorAll(elementsSelectorsEager).forEach((item) => {
+				item.remove();
+			});
+			document.body.style.pointerEvents = "";
+			
+		}, 100);
 	});
 })();
