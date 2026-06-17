@@ -52,11 +52,13 @@
 		"html[lang][dir] body div[data-type='portal']",
 		"html[lang][dir] body #radix-_r_m_",
 		"html[lang][dir] body #radix-_r_h_",
-		"html[lang][dir] body span[data-radix-focus-guard]"
+		"html[lang][dir] body span[data-radix-focus-guard]", // Prevents page from interacting
+		"html img[src*='edge.perplexity.ai/image']" // Probably tracking
 	];
 
 	const elementsSelectorsEager = [
-		"html[lang][dir] body span[data-radix-focus-guard]"
+		"html[lang][dir] body span[data-radix-focus-guard]",
+		"html img[src*='edge.perplexity.ai/image']"
 	]
 
 	GM_addStyle(`
